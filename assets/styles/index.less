@@ -28,6 +28,10 @@ ul {
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 // Container 
 
 #container {
@@ -95,8 +99,10 @@ ul {
   grid-template-areas:
     "home home"
     "calculator calculator"
-    "about about";
+    "about about"
+    "contact contact";
   padding-top: 5.438rem;
+  grid-auto-rows: auto auto auto 730px;
 }
 
 // Home
@@ -580,6 +586,252 @@ input[type=submit]:hover {
 .about-instagram {
   padding-right: 8px;
 }
+
 .about-facebook {
   padding-right: 8px;
+}
+
+// Contato
+
+.contact {
+  grid-area: contact;
+  grid-auto-rows: auto 612px;
+  display: grid;
+  width: 1216px;
+  height: 832px;
+  border-radius: 8px;
+  background: @neutralcolors-white;
+  .blur-4();
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+  gap: 44px;
+  top: -220px;
+  position: relative;
+}
+
+.contact-title h1 {
+  color: @neutralcolors-gray-100;
+  text-align: center;
+  .headline-regular-1();
+}
+
+.contact-title h1 span {
+  color: @brandcolor-primary-500;
+  .headline-bold-1();
+}
+
+.contact-title p {
+  color: @neutralcolors-gray-40;
+  text-align: center;
+  .body-regular-1();
+}
+
+textarea#message {
+  width: 384px;
+  height: 150px;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  .blur-4();
+  background-color: @neutralcolors-white;
+  padding: 20px 0px 20px 24px;
+  .body-regular-2();
+  margin-bottom: 16px;
+  color: @neutralcolors-gray-40;
+}
+
+textarea#message:focus {
+  border: 1px solid @brandcolor-primary-500;
+  outline: none;
+  box-shadow: 0 0 0 0;
+  color: @neutralcolors-gray-100;
+}
+
+input[type=email] {
+  width: 384px;
+  height: 64px;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  .blur-4();
+  background-color: @neutralcolors-white;
+  padding: 20px 0px 20px 24px;
+  .body-regular-2();
+  margin-bottom: 16px;
+  color: @neutralcolors-gray-40;
+}
+
+input[type=email]:focus {
+  border: 1px solid @brandcolor-primary-500;
+  outline: none;
+  box-shadow: 0 0 0 0;
+  color: @neutralcolors-gray-100;
+}
+
+.contact-form {
+  display: inline-flex;
+  gap: 104px;
+}
+
+form#contact {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+#contact label {
+  color: @neutralcolors-gray-100;
+  .body-regular-2();
+  padding-bottom: 8px;
+}
+
+#contact label span {
+  color: @alertcolor-500;
+  .body-regular-2();
+}
+
+.other-contact {
+  margin-top: 88px;
+  display: flex;
+  flex-direction: column;
+}
+
+.telephone {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+.telephone p {
+  .body-regular-2();
+  color: @neutralcolors-gray-100;
+  text-align: center;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.email p {
+  .body-regular-2();
+  color: @neutralcolors-gray-100;
+  text-align: center;
+}
+
+.social-contact {
+  display: flex;
+  padding-top: 16px;
+  padding-left: 49px;
+  gap: 16px;
+}
+
+// Footer
+
+footer {
+  grid-area: footer;
+  display: grid;
+  height: 429px;
+  background-color: @brandcolor-primary-500;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 24px 103px 62px 125px;
+}
+
+.copy {
+  display: flex;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.copy p {
+  width: 280px;
+  color: @neutralcolors-white;
+  .body-regular-3();
+}
+
+.newsletter {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.newsletter h5 {
+  width: 278px;
+  color: @neutralcolors-white;
+  .headline-regular-5();
+}
+
+.newsletter h5 span {
+  .headline-bold-5();
+}
+
+#newsletter-button {
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0px 8px 8px 0px;
+  background-color: @neutralcolors-gray-100;
+  margin-top: -96px;
+  margin-left: 350px;
+  border: none;
+}
+
+.services {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 187px;
+}
+
+.services p {
+  color: @neutralcolors-white;
+  .body-regular-2();
+}
+
+.services .services-title {
+  color: @neutralcolors-white;
+  .body-bold-1();
+  padding-bottom: 8px;
+}
+
+.about-footer {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 76px;
+}
+
+.about-footer p {
+  color: @neutralcolors-white;
+  .body-regular-2();
+}
+
+.about-footer .about-footer-title {
+  color: @neutralcolors-white;
+  .body-bold-1();
+  padding-bottom: 8px;
+}
+
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 51px;
+  height: 51px;
+  border-radius: 8px;
+  background-color: @neutralcolors-white;
+  margin-left: 121px;
 }
