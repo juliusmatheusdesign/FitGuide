@@ -54,6 +54,7 @@ ul {
   max-height: 4.5rem;
   width: 100%;
   .blur-8();
+  background-color: @neutralcolors-white;
 }
 
 // Brand-menu-container
@@ -104,6 +105,8 @@ ul {
 .home {
   grid-area: home;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 689px 138px;
 }
 
 .content-fitguide {
@@ -127,6 +130,14 @@ ul {
   .body-regular-1();
   color: @neutralcolors-gray-40;
   padding-bottom: 3rem;
+}
+
+.area-grid-1 {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
 }
 
 // Botões
@@ -183,17 +194,17 @@ ul {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-play-state: running;
   -webkit-animation-name: drop;
-          animation-name: drop;
+  animation-name: drop;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
   -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-play-state: running;
-          animation-play-state: running;
+  animation-play-state: running;
 }
 
 .mouse-icon .wheel {
@@ -211,26 +222,154 @@ ul {
     top: 5px;
     opacity: 0;
   }
+
   30% {
     top: 10px;
     opacity: 1;
   }
+
   100% {
     top: 25px;
     opacity: 0;
   }
 }
+
 @keyframes drop {
   0% {
     top: 5px;
     opacity: 0;
   }
+
   30% {
     top: 10px;
     opacity: 1;
   }
+
   100% {
     top: 25px;
     opacity: 0;
   }
+}
+
+// Imagem Content
+
+.rectangle {
+  border-radius: 775px;
+  opacity: 0.12;
+  background: var(--cor-primria-orange-500, #E45826);
+  filter: blur(50px);
+  width: 700px;
+  height: 775px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+// Passo a passo
+
+.step-by-step {
+  display: grid;
+  border-radius: 6px;
+  background-color: @neutralcolors-white;
+  .blur-8();
+  width: 1216px;
+  height: 138px;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  padding: 0px 76px 0px 76px;
+}
+
+// Passo 1
+
+.step-1 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  width: 215px;
+  height: 76px;
+}
+
+.step-1 p.number {
+  color: @brandcolor-primary-500;
+  .headline-bold-1();
+}
+
+.step-1 p.title {
+  color: @neutralcolors-gray-100;
+  .body-bold-1();
+}
+
+.step-1 p.description {
+  color: @neutralcolors-gray-40;
+  .body-regular-2();
+}
+
+// Passo 2
+
+.step-2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  width: 285px;
+  height: 76px;
+}
+
+.step-2 p.number {
+  color: @brandcolor-primary-500;
+  .headline-bold-1();
+}
+
+.step-2 p.title {
+  color: @neutralcolors-gray-100;
+  .body-bold-1();
+}
+
+.step-2 p.description {
+  color: @neutralcolors-gray-40;
+  .body-regular-2();
+}
+
+// Passo 3
+
+.step-3 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  width: 294px;
+  height: 76px;
+}
+
+.step-3 p.number {
+  color: @brandcolor-primary-500;
+  .headline-bold-1();
+}
+
+.step-3 p.title {
+  color: @neutralcolors-gray-100;
+  .body-bold-1();
+}
+
+.step-3 p.description {
+  color: @neutralcolors-gray-40;
+  .body-regular-2();
+}
+
+// Caculadora
+
+
+
+.calculator h1 {
+  .headline-regular-1();
+  color: @neutralcolors-gray-100;
+  padding-bottom: 1.5rem;
+}
+
+.calculator h1 span {
+  .headline-bold-1();
+  color: @brandcolor-primary-500;
 }
