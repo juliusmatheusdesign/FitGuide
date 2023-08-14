@@ -14,7 +14,6 @@
 
 body {
   width: 100%;
-  max-width: 1216px;
   height: 100vh;
   margin: 0 auto;
   background-color: @neutralcolors-white;
@@ -107,6 +106,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 689px 138px;
+  justify-items: center;
 }
 
 .content-fitguide {
@@ -138,6 +138,14 @@ ul {
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 1;
+}
+
+.area-grid-2 {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
 
 // Botões
@@ -172,6 +180,11 @@ ul {
   .body-bold-1();
   border: none;
   cursor: pointer;
+}
+
+.primary-l-icon-right:hover {
+  background-color: @brandcolor-primary-700;
+  transition: ease-in-out 0.5s;
 }
 
 // Icon Scroll animate
@@ -361,15 +374,212 @@ ul {
 
 // Caculadora
 
-
+.calculator {
+  grid-area: calculator;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-auto-rows: 244px 609px;
+  padding-top: 120px;
+  justify-items: center;
+  gap: 40px;
+}
 
 .calculator h1 {
   .headline-regular-1();
   color: @neutralcolors-gray-100;
   padding-bottom: 1.5rem;
+  text-align: center;
 }
 
 .calculator h1 span {
   .headline-bold-1();
   color: @brandcolor-primary-500;
+}
+
+.title-calculator {
+  width: 592px;
+  height: 244px;
+}
+
+.title-calculator p {
+  .body-regular-1();
+  color: @neutralcolors-gray-40;
+  text-align: center;
+}
+
+.calculator-imc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 1216px;
+  height: 609px;
+  .blur-4();
+  background: @neutralcolors-white;
+  border-radius: 8px;
+  align-items: center;
+  gap: 136px;
+}
+
+.what-is-the-imc {
+  width: 488px;
+  height: 382px;
+  margin-left: 104px;
+}
+
+.what-is-the-imc h5 {
+  color: @brandcolor-primary-500;
+  .headline-regular-5();
+  padding-bottom: 16px;
+}
+
+.what-is-the-imc span {
+  .headline-bold-5();
+}
+
+.what-is-the-imc p {
+  .body-regular-1();
+  color: @neutralcolors-gray-40;
+  width: 488px;
+}
+
+.form-imc form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-imc form label {
+  display: inline-flex;
+  align-items: center;
+  color: @neutralcolors-gray-100;
+  .body-regular-2();
+  padding-bottom: 8px;
+}
+
+.form-imc form label span {
+  color: @alertcolor-500;
+  .body-regular-2();
+}
+
+.observation {
+  .body-regular-4();
+  color: @neutralcolors-gray-30;
+  padding-left: 8px;
+}
+
+.required {
+  color: @neutralcolors-gray-40;
+  .body-regular-2();
+  padding-left: 72px;
+}
+
+.required span {
+  color: @alertcolor-500;
+}
+
+// Inputs
+
+input[type=text] {
+  width: 384px;
+  height: 64px;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  .blur-4();
+  background-color: @neutralcolors-white;
+  padding: 20px 0px 20px 24px;
+  .body-regular-2();
+  margin-bottom: 16px;
+  color: @neutralcolors-gray-40;
+}
+
+input[type=text]:focus {
+  border: 1px solid @brandcolor-primary-500;
+  outline: none;
+  box-shadow: 0 0 0 0;
+  color: @neutralcolors-gray-100;
+}
+
+input[type=submit] {
+  display: flex;
+  width: 384px;
+  padding: 20px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background-color: @brandcolor-primary-500;
+  color: @neutralcolors-white;
+  .body-bold-1();
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 24px;
+}
+
+input[type=submit]:hover {
+  background-color: @brandcolor-primary-700;
+  transition: ease-in-out 0.5s;
+}
+
+// Sobre Nós
+
+.about {
+  grid-area: about;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-auto-rows: 149px 550px;
+  margin-top: 120px;
+  justify-items: center;
+  background-color: @brandcolor-primary-500;
+  gap: 54px;
+  width: 100%;
+  height: 1138px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.about h1 {
+  color: @neutralcolors-white;
+  .headline-regular-1();
+  margin-top: 80px;
+}
+
+.about h1 span {
+  .headline-bold-1();
+}
+
+.about-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 32px;
+}
+
+.about-description img {
+  width: 592px;
+  height: 514px;
+  border-radius: 8px;
+}
+
+.about-description p {
+  color: @neutralcolors-white;
+  width: 488px;
+  .body-regular-1();
+}
+
+.social-about {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.social-about a img {
+  width: 35px;
+  height: 35px;
+}
+
+.about-instagram {
+  padding-right: 8px;
+}
+.about-facebook {
+  padding-right: 8px;
 }
