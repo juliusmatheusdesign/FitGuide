@@ -60,6 +60,14 @@ html {
   background-color: @neutralcolors-white;
 }
 
+.header-mobile {
+  display: none;
+}
+
+.nav-oculto {
+  display: none;
+}
+
 // Brand-menu-container
 
 .brand-menu-container {
@@ -85,6 +93,10 @@ html {
 .menu li a:hover {
   color: @brandcolor-primary-500;
   transition: ease-in-out 0.3s;
+}
+
+#nav-oculto {
+  display: none;
 }
 
 // Social Header
@@ -751,6 +763,10 @@ form#contact {
   gap: 16px;
 }
 
+.equip-fitguide-mobile {
+  display: none;
+}
+
 // Footer
 
 footer {
@@ -888,6 +904,14 @@ footer {
 
 #footer-tablet {
   display: none;
+}
+
+// Responsividade [Desktop 1400]
+
+@media only screen and (max-width: 1400px) {
+  .rectangle {
+    display: none;
+  }
 }
 
 
@@ -1169,13 +1193,21 @@ footer {
 
   // Contato
 
+  .equip-fitguide-mobile {
+    display: none;
+  }
+
   .contact {
     top: -70px;
     width: 704px;
     padding: 64px 56px 40px 56px;
     display: grid;
-    margin: 0px 32px 0px 32px;
+    margin: auto;
     height: auto;
+  }
+
+  .back-to-top {
+    margin-left: 222px;
   }
 
   .contact-form {
@@ -1241,4 +1273,340 @@ footer {
     align-items: center;
     margin: 0 auto;
   }
+}
+
+
+// Responsividade [Mobile 375x]
+
+@media only screen and (max-width: 375px) {
+
+  // Header
+
+  .header-mobile {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 4.5rem;
+    max-height: 4.5rem;
+    width: 100vw;
+    .blur-8();
+    background-color: @neutralcolors-white;
+  }
+
+
+  // Menu Mobile
+
+  #menu-toggle-container {
+    padding: 0px 24px 0px 0px;
+    display: block;
+  }
+
+  #nav-oculto {
+    display: none;
+    position: fixed;
+    margin-top: 73px;
+    width: 100vw;
+    height: 232px;
+    background-color: @neutralcolors-white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 136px 64px 147px;
+    .blur-4();
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-mobile li a {
+    .body-regular-2();
+    color: @neutralcolors-gray-100;
+  }
+
+  .social-header {
+    margin-top: 16px;
+  }
+
+  // Home
+
+  .home {
+    grid-auto-rows: 396px;
+  }
+
+  .content-fitguide {
+    width: 100vw;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-fitguide h1 {
+    width: 326px;
+    .headline-regular-5
+  }
+
+  .content-fitguide h1 span {
+    .headline-bold-5();
+  }
+
+  .content-fitguide p {
+    width: 326px;
+    padding-bottom: 48px;
+    .body-regular-3();
+  }
+
+  .primary-l-icon-right {
+    display: flex;
+    width: 326px;
+    padding: 12px 20px 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .app-mobile {
+    .body-regular-2();
+  }
+
+  .app-mobile svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .area-grid-2 {
+    display: none;
+  }
+
+  // Main
+
+  .main {
+    padding-top: 40px;
+  }
+
+  // Caculadora
+
+  #calculator {
+    padding-top: 80px;
+  }
+
+  .calculator h1 {
+    width: 326px;
+    .headline-regular-5
+  }
+
+  .calculator h1 span {
+    .headline-bold-5();
+  }
+
+  .title-calculator {
+    width: 592px;
+    height: auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-calculator p {
+    width: 326px;
+    .body-regular-3();
+  }
+
+  .calculator-imc {
+    width: 326px;
+    height: auto;
+    gap: 16px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px 23px 16px 23px;
+  }
+
+  .what-is-the-imc {
+    width: auto;
+    height: auto;
+    margin: 0px;
+  }
+
+  .what-is-the-imc h5 {
+    .headline-regular-6();
+    padding-bottom: 0px;
+  }
+
+  .what-is-the-imc h5 span {
+    .headline-bold-6();
+  }
+
+  .what-is-the-imc p {
+    display: flex;
+    width: 280px;
+    height: 240px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    .body-regular-4();
+  }
+
+  // Input
+
+  input[type=text] {
+    width: 290px;
+    height: 48px;
+    .body-regular-4();
+  }
+
+  .form-imc form label {
+    .body-regular-3();
+  }
+
+  .observation {
+    .body-regular-4();
+  }
+
+  .required {
+    display: none;
+  }
+
+  input[type=submit] {
+    display: flex;
+    width: 290px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  input#name {
+    width: 290px;
+    height: 48px;
+    .body-regular-4();
+  }
+
+  input[type=email] {
+    width: 290px;
+    height: 48px;
+    .body-regular-4();
+  }
+
+  textarea#message {
+    width: 290px;
+    height: 150px;
+    .body-regular-4();
+  }
+
+  // Sobre nós
+
+  .about {
+    width: 100vw;
+    margin-top: 80px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about h1 {
+    .headline-regular-5();
+    margin-top: 56px;
+  }
+
+  .about h1 span {
+    .headline-bold-5();
+  }
+
+  .equip-fitguide-mobile {
+    display: block;
+  }
+
+  .equip-fitguide-tablet {
+    display: none;
+  }
+
+  .about-description img {
+    width: 326px;
+    height: 252px;
+  }
+
+  .about-description p {
+    width: 326px;
+    .body-regular-3();
+  }
+
+  // Contato
+
+  .contact {
+    top: -196px;
+    width: 326px;
+    padding: 40px 15px 0px 15px;
+    display: grid;
+    height: auto;
+    margin: 24px;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .contact-title h1 {
+    .headline-regular-5();
+  }
+
+  .contact-title h1 span {
+    .headline-bold-5();
+  }
+
+  .contact-title p {
+    .body-regular-3();
+  }
+
+  #enviar-contato {
+    display: flex;
+    width: 290px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    .body-bold-4();
+  }
+
+  .contact-title {
+    padding-bottom: 0px;
+  }
+
+  // Footer 
+
+  #footer-tablet {
+    margin-top: -160px;
+  }
+
+  .footer-content {
+    padding: 24px;
+  }
+
+  .back-to-top {
+    display: none;
+  }
+
+  #newsletter {
+    width: 282px;
+    height: 64px;
+  }
+
+  #newsletter-button {
+    margin-left: 257px;
+  }
+
 }
