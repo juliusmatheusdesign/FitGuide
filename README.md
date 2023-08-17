@@ -14,7 +14,6 @@ Neste projeto, decidi aplicar conhecimentos adquiridos nos cursos "UI Boost" do 
 ## Acesso ao Projeto
 
 - **Figma**: [Link para o Projeto no Figma](https://www.figma.com/file/LLgp4V78IMiy7GX7JyIh8P/FitGuide?type=design&node-id=3%3A781&mode=design&t=SUPVWeNiKi04R1YS-1)
-- **GitHub**: [Repositório no GitHub](https://github.com/juliusmatheusdesign/FitGuide)
 - **Projeto Ativo**: [Visualizar Projeto Ativo](https://juliusmatheusdesign.github.io/FitGuide/)
 
 ## Como Contribuir
