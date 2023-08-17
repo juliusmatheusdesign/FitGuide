@@ -945,7 +945,7 @@ footer {
 }
 
 
-// Responsividade [Tablet 800x]
+// Responsividade [Tablet 900x]
 
 @media only screen and (max-width: 900px) {
 
@@ -1323,9 +1323,13 @@ footer {
     z-index: 1000;
     height: 4.5rem;
     max-height: 4.5rem;
-    width: 100vw;
+    width: 95vw;
     .blur-8();
     background-color: @neutralcolors-white;
+  }
+
+  .header {
+    display: none;
   }
 
 
@@ -1340,7 +1344,7 @@ footer {
     display: none;
     position: fixed;
     margin-top: 73px;
-    width: 100vw;
+    width: 95vw;
     height: 232px;
     background-color: @neutralcolors-white;
     flex-direction: column;
@@ -1370,12 +1374,14 @@ footer {
 
   .social-header {
     margin-top: 16px;
+    margin-left: 19px;
   }
 
   // Home
 
   .home {
     grid-auto-rows: 396px;
+    width: 95vw;
   }
 
   .content-fitguide {
@@ -1425,6 +1431,12 @@ footer {
   // Main
 
   .main {
+    grid-template-areas:
+      "home"
+      "calculator"
+      "about"
+      "contact";
+    width: 95vw;
     padding-top: 40px;
   }
 
@@ -1432,6 +1444,7 @@ footer {
 
   #calculator {
     padding-top: 80px;
+    width: 95vw;
   }
 
   .calculator h1 {
@@ -1542,7 +1555,7 @@ footer {
   // Sobre nós
 
   .about {
-    width: 100vw;
+    width: 100%;
     margin-top: 80px;
     display: inline-flex;
     flex-direction: column;
@@ -1585,7 +1598,6 @@ footer {
     padding: 40px 15px 0px 15px;
     display: grid;
     height: auto;
-    margin: 24px;
     justify-content: center;
     justify-items: center;
   }
@@ -1616,6 +1628,15 @@ footer {
     padding-bottom: 0px;
   }
 
+  .contact-form {
+    width: 290px;
+  }
+
+  #contact {
+    margin: 0 auto;
+    width: 326px;
+  }
+
   // Footer 
 
   #footer-tablet {
@@ -1639,4 +1660,91 @@ footer {
     margin-left: 257px;
   }
 
+}
+
+// Responsividade [375x Mobile]
+
+@media only screen and (max-width: 375px) {
+  .header-mobile {
+    width: 108vw;
+  }
+
+  .main {
+    grid-template-areas:
+      "home"
+      "calculator"
+      "about"
+      "contact";
+    width: 108vw;
+    padding-top: 40px;
+  }
+
+  #home {
+    margin: 0 auto;
+  }
+
+  #calculator {
+    margin: 0 auto;
+  }
+
+  #nav-oculto {
+    width: 108vw;
+  }
+}
+
+// Responsividade [325x Mobile]
+
+@media only screen and (max-width: 325px) {
+
+  // Main
+
+  .main {
+    grid-template-areas:
+      "home"
+      "calculator"
+      "about"
+      "contact";
+    width: 100vw;
+  }
+
+  .header-mobile {
+    margin: 0 auto;
+    width: 115vw;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #home {
+    margin: 0 auto;
+  }
+
+  // Calculadora 
+
+  #calculator {
+    padding-left: 8px;
+  }
+}
+
+// Responsividade [320x Mobile]
+
+@media only screen and (max-width: 320px) {
+
+  .header-mobile {
+    width: 125vw;
+  }
+
+  #nav-oculto {
+    width: 125vw;
+  }
+
+  .main {
+    grid-template-areas:
+      "home"
+      "calculator"
+      "about"
+      "contact";
+    width: 125vw;
+  }
 }
