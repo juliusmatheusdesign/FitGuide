@@ -27,6 +27,8 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
     <script src="./assets/scripts/menuOculto.js" defer></script>
+    <script src="./assets/scripts/calculadoraIMC.js" defer></script>
+    <script src="./assets/scripts/contact.js" defer></script>
     <title>FitGuide - Guiando você em direção ao bem-estar</title>
   </head>
   <body>
@@ -314,7 +316,7 @@
               </p>
             </div>
             <div class="form-imc">
-              <form>
+              <form onsubmit="return calcular(event)">
                 <label for=""
                   >Idade<span>*</span>
                   <div class="observation">Somente números</div>
@@ -342,7 +344,7 @@
                 />
                 <label for=""
                   >Altura<span>*</span>
-                  <div class="observation">Somente números</div></label
+                  <div class="observation">Exemplo: 1.85</div></label
                 >
                 <input
                   type="text"
@@ -354,6 +356,7 @@
 
                 <input type="submit" value="Calcular IMC" />
               </form>
+              <div id="resultado"></div>
             </div>
           </div>
         </section>
@@ -449,7 +452,7 @@
             <p>Estamos aqui por você! Como podemos ajudar!</p>
           </div>
           <div class="contact-form">
-            <form id="contact">
+            <form onsubmit="return contact(event)" id="contact">
               <label for="">Nome<span>*</span></label>
               <input
                 type="text"
@@ -476,6 +479,8 @@
                 placeholder="Vá em frente, estamos ouvindo......"
                 style="resize: none"
               ></textarea>
+
+              <div id="sucess"></div>
 
               <input type="submit" value="Enviar" id="enviar-contato" />
             </form>
